@@ -23,16 +23,13 @@
   --text-button: 'Roboto', sans-serif;
   --font-size-html: 62.5%;
   --font-size-body: 1.6rem;
-  --font-size-pagetitle: clamp(2.2rem, 2.3vw + 0.1rem, 3.5rem);
+  --font-size-pagetitle: clamp(3rem, 3vw + 0.1rem, 3.5rem);
   --color-card: rgb(0, 0, 0);
   --color-card-btn: rgb(255, 255, 255);
   --background-color-body: linear-gradient(29.83deg,#095aa1 0%,#4FE8E4 100%);
   --background-color-btn: linear-gradient(225deg,#FFAF00 0%,#FE4D1B 48.15%,#E70154 100%);
   --background-color-card: #f9fbfccc;
   --box-shadow-card: 5px 5px 25px #095aa1;
-  --box-shadow-card-hover: 0 0 35px #4FE8E4;
-  --box-shadow-card-projetos: 4px 4px 15px 1px #C0C5CE;
-  --box-shadow-card-projetos-hover: 0 0 8px #34bbff;
   --border-radius: 0.8rem;
 }
 
@@ -61,6 +58,7 @@ body {
                  "main"     1fr
                  "footer"   auto
                 / 1fr;
+
 }
 
 .header {
