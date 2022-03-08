@@ -1,0 +1,220 @@
+/*Nunito*/
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,600;0,700;0,900;1,300&display=swap');
+
+/*Roboto*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap');
+
+/*Ubuntu*/
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap');
+
+/*Lora*/
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&display=swap');
+
+/*Merriweather*/
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&display=swap');
+
+:root {
+  --max-width: 1200px;
+  --text-menu: 'Lora', serif;
+  --text-h1: 'Merriweather Sans', sans-serif;
+  --text-name: 'Ubuntu', sans-serif;
+  --text-header: 'Ubuntu', sans-serif;
+  --text-primary: 'Nunito', sans-serif;
+  --text-button: 'Roboto', sans-serif;
+  --font-size-html: 62.5%;
+  --font-size-body: 1.6rem;
+  --font-size-pagetitle: clamp(2.2rem, 2.3vw + 0.1rem, 3.5rem);
+  --color-card: rgb(0, 0, 0);
+  --color-card-btn: rgb(255, 255, 255);
+  --background-color-body: linear-gradient(29.83deg,#095aa1 0%,#4FE8E4 100%);
+  --background-color-btn: linear-gradient(225deg,#FFAF00 0%,#FE4D1B 48.15%,#E70154 100%);
+  --background-color-card: #f9fbfccc;
+  --box-shadow-card: 5px 5px 25px #095aa1;
+  --box-shadow-card-hover: 0 0 35px #4FE8E4;
+  --box-shadow-card-projetos: 4px 4px 15px 1px #C0C5CE;
+  --box-shadow-card-projetos-hover: 0 0 8px #34bbff;
+  --border-radius: 0.8rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+}
+
+html {
+  font-size: var(--font-size-html);
+}
+
+body {
+  font-size: var(--font-size-body);
+  font-family: var(--text-primary);
+  background: var( --background-color-body);
+
+  width: 100%;
+  height: 100vh;
+
+  display: grid;
+  grid-template: "header"   auto
+                 "main"     1fr
+                 "footer"   auto
+                / 1fr;
+}
+
+.header {
+  grid-area: header;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 0.5rem;
+  border-bottom: 0.4px solid rgb(204, 194, 194);
+}
+
+.header > img {
+  height: 4rem;
+  animation: girar 1s;
+}
+
+.header .container-titulo > img{
+  height: 3rem;
+  animation: piscar 1s linear infinite alternate;
+}
+
+.header h1 {
+  font-family: var(--text-header);
+  font-size: var(--font-size-pagetitle);
+}
+
+.main {
+  grid-area: main;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 28rem;
+  height: 40rem;
+  background: var(--background-color-card);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow-card);
+  transition: all 0.4s;
+  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.card:hover {
+  box-shadow: var(--box-shadow-card-hover);
+  animation: expandir 1s;
+  animation-fill-mode: forwards;
+}
+
+.card > h2 {
+  animation: piscarLuz 2s linear infinite alternate forwards;
+}
+
+.container-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.container-form .padrao-input {
+  width: 100%;
+  height: 3rem;
+  border-radius: var(--border-radius);
+}
+
+.container-form .padrao-input::selection {
+  background-color: #fada06;
+}
+
+.container-form .link-btn {
+  width: 100%;
+}
+
+.container-form .btn {
+  background: var(--background-color-btn);
+  color: var(--color-card-btn);
+  transition: all 0.4s;
+}
+
+.container-form .btn:hover {
+  box-shadow: 0 0 10px #FE4D1B;
+  letter-spacing: 2px;
+}
+
+#resultado {
+  margin-top: 3rem;
+  font-size: var(--font-size-pagetitle);
+}
+
+.footer {
+  grid-area: footer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  border-top: 0.4px solid rgb(204, 194, 194);
+}
+
+.footer > img {
+  height: 5rem;
+}
+
+
+@keyframes girar {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes piscar {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.15);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes piscarLuz {
+  0% {
+    text-shadow: 0 0 5px #fada06, 0 0 15px #fada06, 0 0 25px #fada06;
+  }
+
+  50% {
+    text-shadow: 0 0 5px #FE4D1B, 0 0 15px #FE4D1B, 0 0 25px #FE4D1B;
+  }
+
+  100% {
+    text-shadow: 0 0 5px #E70154, 0 0 15px #E70154, 0 0 25px #E70154;
+  }
+}
+
+@keyframes expandir {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.05);
+  }
+}
