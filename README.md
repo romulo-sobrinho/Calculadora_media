@@ -34,7 +34,7 @@
   ✔️ Site responsivo com o auxílio de @media queries
   
   ### JavaScript
-  ✔️ Manipulação de dados com o DOM
+  ✔️ Manipulação de dados com o DOM <br>
   ✔️ Utilização de funções para média e para extrair valor
   
   
